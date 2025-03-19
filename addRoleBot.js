@@ -8,11 +8,11 @@ const client = new Client({
   ]
 });
 
-const token = 'TOKEN';
+const token = process.env.token;
 
 const roleId = 'ROLE_ID';
 
-const guildId = 'GUILD_ID';
+const guildId = process.env.guildId;
 
 client.once('ready', async () => {
   console.log(`Logged in as ${client.user.tag}!`);

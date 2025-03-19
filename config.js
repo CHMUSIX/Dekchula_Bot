@@ -1,8 +1,8 @@
 require('dotenv').config();
 
 module.exports = {
-    token: "",
-    clientId: "1350867065841389568",
+    token: process.env.token,
+    clientId: process.env.clientId,
     welcomeChannelName: "・🚪┃ประตูเข้า",
     goodbyeChannelName: "・🚪┃ประตูออก",
     inviteLink: "https://discord.gg/Ha8cyS4U6h",
