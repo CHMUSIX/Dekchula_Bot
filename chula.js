@@ -542,7 +542,7 @@ client.on('interactionCreate', async interaction => {
   if (customId === 'select_decorative_role') {
 
     for (const role of config.decorativeRoles) {
-      const guildRole = interaction.guild.roles.cache.find(r => r.name.toLowerCase().includes(role.value));
+      const guildRole = interaction.guild.roles.cache.find(r => r.name === role.name);
       if (guildRole && member.roles.cache.has(guildRole.id)) {
         await member.roles.remove(guildRole);
       }
@@ -554,7 +554,7 @@ client.on('interactionCreate', async interaction => {
       const roleConfig = config.decorativeRoles.find(r => r.value === value);
 
 
-      let guildRole = interaction.guild.roles.cache.find(r => r.name.toLowerCase().includes(value));
+      let guildRole = interaction.guild.roles.cache.find(r => r.name === roleConfig.name);
 
       if (!guildRole) {
 
@@ -583,7 +583,7 @@ client.on('interactionCreate', async interaction => {
   else if (customId === 'select_sex_role') {
 
     for (const role of config.sexRoles) {
-      const guildRole = interaction.guild.roles.cache.find(r => r.name.toLowerCase().includes(role.value));
+      const guildRole = interaction.guild.roles.cache.find(r => r.name === role.name);
       if (guildRole && member.roles.cache.has(guildRole.id)) {
         await member.roles.remove(guildRole);
       }
@@ -595,7 +595,7 @@ client.on('interactionCreate', async interaction => {
       const roleConfig = config.sexRoles.find(r => r.value === value);
 
 
-      let guildRole = interaction.guild.roles.cache.find(r => r.name.toLowerCase().includes(value));
+      let guildRole = interaction.guild.roles.cache.find(r => r.name === roleConfig.name);
 
       if (!guildRole) {
 
@@ -626,7 +626,7 @@ client.on('interactionCreate', async interaction => {
   else if (customId === 'select_game_role') {
 
     for (const role of config.gameRoles) {
-      const guildRole = interaction.guild.roles.cache.find(r => r.name.toLowerCase().includes(role.value));
+      const guildRole = interaction.guild.roles.cache.find(r => r.name === role.name);
       if (guildRole && member.roles.cache.has(guildRole.id)) {
         await member.roles.remove(guildRole);
       }
@@ -639,7 +639,7 @@ client.on('interactionCreate', async interaction => {
       const roleConfig = config.gameRoles.find(r => r.value === value);
 
 
-      let guildRole = interaction.guild.roles.cache.find(r => r.name.toLowerCase().includes(value));
+      let guildRole = interaction.guild.roles.cache.find(r => r.name === roleConfig.name);
 
       if (!guildRole) {
 
@@ -691,7 +691,7 @@ client.on('interactionCreate', async interaction => {
   else if (customId === 'select_color_role') {
 
     for (const role of config.colorRoles) {
-      const guildRole = interaction.guild.roles.cache.find(r => r.name.toLowerCase().includes(role.value));
+      const guildRole = interaction.guild.roles.cache.find(r => r.name === role.name);
       if (guildRole && member.roles.cache.has(guildRole.id)) {
         await member.roles.remove(guildRole);
       }
@@ -703,7 +703,7 @@ client.on('interactionCreate', async interaction => {
       const roleConfig = config.colorRoles.find(r => r.value === value);
 
 
-      let guildRole = interaction.guild.roles.cache.find(r => r.name.toLowerCase().includes(value));
+      let guildRole = interaction.guild.roles.cache.find(r => r.name === roleConfig.name);
 
       if (!guildRole) {
 
@@ -733,7 +733,7 @@ client.on('interactionCreate', async interaction => {
   else if (customId === 'select_notification_role') {
 
     for (const role of config.notificationRoles) {
-      const guildRole = interaction.guild.roles.cache.find(r => r.name.toLowerCase().includes(role.value));
+      const guildRole = interaction.guild.roles.cache.find(r => r.name === role.name);
       if (guildRole && member.roles.cache.has(guildRole.id)) {
         await member.roles.remove(guildRole);
       }
@@ -746,7 +746,7 @@ client.on('interactionCreate', async interaction => {
       const roleConfig = config.notificationRoles.find(r => r.value === value);
 
 
-      let guildRole = interaction.guild.roles.cache.find(r => r.name.toLowerCase().includes(value));
+      let guildRole = interaction.guild.roles.cache.find(r => r.name === roleConfig.name);
 
       if (!guildRole) {
 
